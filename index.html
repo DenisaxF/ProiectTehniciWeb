@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang = 'ro'>
+    <head>
+        <title>Libraria Bookshelf Boutique</title>
+        <meta charset="UTF-8"><!-- codificarea în memorie a caracterelor-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- va fi explicat când ajungem la CSS -->
+        <meta name="keywords" content="carti, papetarie, muzica, jocuri de societate, libraria Bookshelf Boutique, comenzi online">
+        <!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+        <meta name="description" content="Avem carti de toate genurile, de la romane fantasy pana la carti istorice. Avem si albume de la diversi artisti, rechizite, carti de joc. Comenzi online cu livrari in orice oras">
+        <!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
+        <meta name="author" content="Gheorghe Florentina Denisa">  <!-- autorul/autoarea paginii--> 
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./resurse/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./resurse/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./resurse/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./resurse/favicon/site.webmanifest">
+        <link rel="mask-icon" href="./resurse/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./resurse/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="./resurse/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="resurse/css/main.css" type="text/css" />
+        <script defer>
+            MathJax.Hub.Config({
+              MathML: {
+                extensions: ["mml3.js"]
+              }
+            });
+           </script>
+           
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Bookshelf Boutique</h1>
+            <nav>
+                <ul>
+                    <li>Acasa
+                        <ul>
+                            <li><a href="#welcome">Bine ati venit</a></li>
+                            <li><a href="#promotii">Promotii</a></li>
+                            <li><a href="#intrebari">Intrebari</a></li>
+                        </ul>
+                    </li>
+                    <li>Produse</li>
+                    <li>Info</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id = "welcome">
+                <h2>Bine ati venit</h2>
+                <ul>
+                    <li><a href="pagina.html">Alta pagina</a></li>
+                    <li><a href="http://www.google.com" target="_blank">Google</a></li>
+                </ul>
+                <figure>
+                    <picture>
+                        <source srcset="./resurse/imagini/ACOTAR-books-in-order_nou(2).jpg" media="(max-width: 700px)"/>
+                        <source srcset="./resurse/imagini/ACOTAR-books-in-order_nou(1).jpg" media="(max-width: 1200px)" />
+                        <img src = "./resurse/imagini/ACOTAR-books-in-order_nou.jpg" alt = "error" title="Carti"/>
+                    </picture>
+                    <figcaption>Seria Acotar</figcaption>
+                 </figure>
+                 
+                
+                <p><span><q>Only you can decide what breaks you!</q> Imbarca-te intr-o aventura fantastica cu spiridusi, zane, magie 
+                    si o iubire nu tocmai ca in basme. Una dintre cele mai cunoscute serii de <b>carti</b> ale celebrei autoare 
+                    Sarah J Mass te va purta in aceasta caltorie si te va face sa nu mai lasi cartea din mana.
+                </span></p>
+                <p><span>Afla mai multe despre autoarea cartilor "ACOTAR" si fii la curent cu ultimele ei lansari: 
+                    <a href="https://sarahjmaas.com/" target="_blank">Sarah J. Mass</a>
+                </span></p>
+
+                <div class="taburi-iframe">
+                    <a href="https://www.youtube.com/embed/wKndEF3RoDg?si=nCdjIa_AEL6exSK5" target="ifr-video">Reading guide</a>
+                    <a href="https://www.youtube.com/embed/8AE3SyeWNcg?si=XqQbLPNdzRGO1oIU" target="ifr-video">Interviu</a>
+                </div>
+
+                <iframe name = "ifr-video" width="560" height="315" src="https://www.youtube.com/embed/8AE3SyeWNcg?si=XqQbLPNdzRGO1oIU" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+            </section>
+            <section id = "promotii">
+                <h2>Promotii</h2>
+                <section>
+                    <h3>Super oferta de weekend</h3>
+                    <picture>
+                        <img src="./resurse/imagini/weekend-offer.png" alt="error" />
+                    </picture>
+                    <p><span>Livrare gratuita la <b>comenzi online</b> de minim 100 de lei.</span></p>
+                </section>
+                <article>
+                    <details><summary><h3>MEGA OFERTA!</h3></summary>
+                        <p><b>Libraria Bookshelf Boutique</b> ofera reduceri de <s>10%</s> <ins><b>15%</b></ins> 
+                            pentru orice produs din categoria <b>papetarie</b> pe toata perioada lunii septembrie.</p>
+                    </details>
+                </article>
+                <article>
+                    <details><summary><h3>Voucher cadou!</h3></summary>
+                        <p>La achizitia oricarui produs din sectiunea <b>muzica</b> primiti un voucher cadou in valoare de 30 de lei!</p>
+                    </details>
+                </article>
+                <article>
+                    <details><summary><h3>20% reducere la al doilea produs!</h3></summary>
+                        <p>Cumparati doua <b>jocuri de societate</b> si il primiti pe al doilea la pret redus cu 20%!</p>
+                        <p>Promotie valabila din 07/03/24 pana in 13/03/24!</p>
+                        <p>Exemplu de reducere aplicata asupra celui de al doilea joc: </p>
+                        <math class="math-block" xmlns = "http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mn>100</mn>
+                                <mo>-</mo>
+                                <mn>20</mn>
+                                <mo>%</mo>
+                                <mn>100</mn>
+                                <mo>=</mo>
+                                <mn>80</mn>
+                            </mrow>
+                        </math>
+                    </details>
+                </article>
+            </section>
+            <section id = "intrebari">
+                <h2>Intrebari frecvente</h2>
+                <details><summary> Se pot modifica comenzile dupa ce au fost inregistrate?</summary>
+                    <p>Nu, deoarece comenzile intra in procesare foarte repede pentru a ajunge la dumneavoastra in cel mai scurt timp.
+                        Deci orice modificari ulterioare sunt de cele mai multe ori indisponibile.
+                    </p>
+                </details>
+                <details><summary> Am vrut sa comand un produs etichetat ca "Indisponibil" dar nu am putut. De ce?</summary>
+                    <p>Produsele etichetate cu "Indisponibil" nu se mai afla in stoc si de aceea nu pot fi comandate.</p>
+                </details>
+                <details><summary> De unde pot cumpara un voucher?</summary>
+                    <p> Voucherele pot fi achizitionate fie direct din magazinele noastre, fie online.</p>
+                </details>
+                <details><summary>Livrati si in afara tarii?</summary>
+                    <p>Nu!</p>
+                </details>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="#">Mergi sus</a></li>
+                <li><a href="resurse/imagini/cerere_retur.pdf" download="retur.pdf">Retur</a></li>
+            </ul>
+            <address>
+                Strada Libertatii 12, Sector 1, București
+                <br/>
+                <a href="mailto:bookshelfB@gmail.com">Adresa de mail</a>
+                <a href="tel:+40700707070">Telefon</a>
+                <a href="https://wa.me/+40725928749" target="_blank">WhatsApp</a>
+                <br/>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.88430113932!2d26.097011776083935!3d44.43553547107568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f47f047%3A0x493984726f0235f9!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e0!3m2!1sro!2sro!4v1709987317713!5m2!1sro!2sro" 
+                width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </address>
+            <p><small>Copyright &copy; <time datetime="2024-03-9"> 9 mar 2024</time></small></p>
+        </footer>
+
+    </body>
+
+</html>
