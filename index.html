@@ -22,7 +22,15 @@
         <meta name="msapplication-config" content="./resurse/favicon/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
         <link rel="stylesheet" href="resurse/css/main.css" type="text/css" />
+        <link rel="stylesheet" href="resurse/css/layout.css" type="text/css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+
         <script defer>
             MathJax.Hub.Config({
               MathML: {
@@ -44,18 +52,25 @@
                             <li><a href="#welcome">Bine ati venit</a></li>
                             <li><a href="#promotii">Promotii</a></li>
                             <li><a href="#intrebari">Intrebari</a></li>
+                            <li><a href="#orar">Orar</a></li>
+                            <li><a href="#users">Utilizatori</a></li>
+                            <li><a href="#users_stats">Utilizatori si statistici</a></li>
+                            <li><a href="#anunturi">Anunturi</a></li>
+                            <li><a href="#date">Date</a></li>
                         </ul>
                     </li>
                     <li>Produse</li>
-                    <li>Info</li>
+                    <li>Contul meu</li>
+                    <li>Contact</li>
                 </ul>
             </nav>
         </header>
         <main>
+            <div id="grid-pagina">
             <section id = "welcome">
                 <h2>Bine ati venit</h2>
                 <ul>
-                    <li><a href="pagina.html">Alta pagina</a></li>
+                    <!--<li><a href="pagina.html">Alta pagina</a></li>-->
                     <li><a href="http://www.google.com" target="_blank">Google</a></li>
                 </ul>
                 <figure>
@@ -76,14 +91,125 @@
                     <a href="https://sarahjmaas.com/" target="_blank">Sarah J. Mass</a>
                 </span></p>
 
-                <div class="taburi-iframe">
-                    <a href="https://www.youtube.com/embed/wKndEF3RoDg?si=nCdjIa_AEL6exSK5" target="ifr-video">Reading guide</a>
-                    <a href="https://www.youtube.com/embed/8AE3SyeWNcg?si=XqQbLPNdzRGO1oIU" target="ifr-video">Interviu</a>
+               <div class ="container-iframe">
+                    <div class="taburi-iframe">
+                        <a id = "reading_guide" href="https://www.youtube.com/embed/wKndEF3RoDg?si=nCdjIa_AEL6exSK5" target="ifr-video"><b>Guide</b></a>
+                        <a id = "interview" href="https://www.youtube.com/embed/8AE3SyeWNcg?si=XqQbLPNdzRGO1oIU" target="ifr-video"><b>Interviu</b></a>
+                    </div>
+                    <iframe id="video" name = "ifr-video" width="560" height="315" src="https://www.youtube.com/embed/8AE3SyeWNcg?si=XqQbLPNdzRGO1oIU" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-
-                <iframe name = "ifr-video" width="560" height="315" src="https://www.youtube.com/embed/8AE3SyeWNcg?si=XqQbLPNdzRGO1oIU" title="YouTube video player" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        
+            </section>
+            <section id = "orar">
+                <h2>Orar</h2>
+                <div class = "container-tabel">
+                    <div class = "tabel-scroll">
+                        <table id="tab-orar">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Cod</th>
+                                    <th>Perioadă</th>
+                                    <th>Zi</th>
+                                    <th>Interval dimineata</th>
+                                    <th>Pauza de masa</th>
+                                    <th>Interval seară</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td rowspan="5">Zile<br/>Lucrătoare</td>
+                                    <td>Luni</td>
+                                    <td>10-12</td>
+                                    <td>12-14</td>
+                                    <td>14-20</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    
+                                    <td>Marti</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    
+                                    <td>Miercuri</td>
+                                    <td>9-11</td>
+                                    <td>11-13</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    
+                                    <td>Joi</td>
+                                    <td>9-11</td>
+                                    <td>11-13</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    
+                                    <td>Vineri</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-19</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td rowspan="2">Weekend</td>
+                                    <td>Sambata</td>
+                                    <td>10-12</td>
+                                    <td>12-13</td>
+                                    <td>13-16</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Duminica</td>
+                                    <td>10-14</td>
+                                    <td>-</td>
+                                    <td>inchis</td>
+                                </tr>
+                            </tbody>
+                            <tfoot><tr><td colspan="6">Închis cu ocazia sărbătorilor legale sau când ne e mai lene așa.</td></tr></tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div id = "Descriere"><caption>Mai sus puteti vedea programul nostru</caption></div>
+            </section>
+            <section id = "evenimente">
+                <h2>Calendar evenimente</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi dolores ex ipsam quas, sunt consequatur neque accusamus ipsa ducimus doloremque, deserunt alias excepturi, quibusdam soluta odit distinctio repellat eos.</p>
+            </section>
+            <section id = "users_stats">
+                <h2>Date despre utilizator si statistici</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore distinctio impedit libero quo assumenda provident deleniti accusantium quibusdam! Totam esse magnam quam nihil voluptates nemo vel aut, odio obcaecati aliquam.</p>
+            </section>
+            <section id = "users">
+                <h2>Utilizatori</h2>
+                <p>Lorem, ipsum dolor sit </p>
+                <p>amet consectetur adipisicing elit.</p>
+                <p>Reprehenderit hic tempora minima libero </p>
+                <p>nisi fuga sapiente nihil, delectus modi ipsam adipisci,</p>
+                <p>laboriosam quaerat necessitatibus,</p> 
+                <p>suscipit autem quasi totam voluptatem veniam.</p>
+            </section>
+            <section id = "anunturi">
+                <h2>Anunturi</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic tempora minima libero nisi fuga sapiente nihil, delectus modi ipsam adipisci, laboriosam quaerat necessitatibus, suscipit autem quasi totam voluptatem veniam.</p>
+            </section>
+            <section id = "date">
+                <h2>Date despre site si server</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic tempora minima libero nisi fuga sapiente nihil, delectus modi ipsam adipisci, laboriosam quaerat necessitatibus, suscipit autem quasi totam voluptatem veniam.</p>
             </section>
             <section id = "promotii">
                 <h2>Promotii</h2>
@@ -141,17 +267,19 @@
                     <p>Nu!</p>
                 </details>
             </section>
+            </div>
         </main>
         <footer>
+            <a href="#" title="mergi sus" id="link-top"><div id="triunghi"></div></a>
             <ul>
-                <li><a href="#">Mergi sus</a></li>
-                <li><a href="resurse/imagini/cerere_retur.pdf" download="retur.pdf">Retur</a></li>
+                <li><a href = "#">Top</a></li>
+                <li><a href="resurse/imagini/cerere_retur.pdf" download="retur.pdf">Retur</a><i class="fa-solid fa-download"></i></li>
             </ul>
             <address>
                 Strada Libertatii 12, Sector 1, București
                 <br/>
-                <a href="mailto:bookshelfB@gmail.com">Adresa de mail</a>
-                <a href="tel:+40700707070">Telefon</a>
+                <a href="mailto:bookshelfB@gmail.com">Adresa de mail</a><i class="fa-solid fa-envelope fa-flip"></i>
+                <a href="tel:+40700707070">Telefon </a><i class="fa-solid fa-phone"></i>
                 <a href="https://wa.me/+40725928749" target="_blank">WhatsApp</a>
                 <br/>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.88430113932!2d26.097011776083935!3d44.43553547107568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f47f047%3A0x493984726f0235f9!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e0!3m2!1sro!2sro!4v1709987317713!5m2!1sro!2sro" 
