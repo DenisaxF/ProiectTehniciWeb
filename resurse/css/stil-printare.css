@@ -1,0 +1,85 @@
+#grid-pagina{
+    display: block;
+}
+
+figure, .container-iframe, #link-top{
+    display: none;
+}
+
+a{
+    color: var(--culoare-text);
+    text-decoration: none;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Afiseaza meniul sub forma de lista neordonata */
+nav ul {
+    display: block;
+    list-style-type: none;
+    color: var(--culoare-text);
+}
+
+/* Adauga un page break dupa meniu */
+nav {
+    display: block;
+    page-break-after: always;
+}
+
+body{
+    display: block;
+}
+
+footer {
+    display: block;
+    page-break-before: always;
+}
+
+#watermark {
+    display: flex;
+    position:fixed;
+    top: 50%;
+    padding-left: var(--spatiere);
+    padding-right: var(--spatiere);
+    width: 60%;
+    height: 10%;
+    font-size: 30px;
+    color: var(--culoare-text);
+    opacity: 0.3;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@page :left {
+    margin-left: 2cm;
+    margin-right: 1cm;
+}
+
+@page :right {
+    margin-left: 1cm;
+    margin-right: 2cm;
+}
+
+#banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 3px double var(--culoare-text); 
+    padding: 10px; 
+    width: 50%; 
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+  
+  #banner p {
+    margin: 0; 
+  }
+  
+  #banner small {
+    color: var(--culoare-text); 
+  }
+  

@@ -1,0 +1,84 @@
+html{
+    font-size: 18px;
+    font-family: "Wix Madefor Display", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#grid-pagina{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);   /*1fr 1fr 1fr ;*/
+    grid-template-areas: "welcome welcome welcome"
+                         "orar orar intrebari"
+                         "evenimente users_stats intrebari"
+                         "users users_stats intrebari"
+                         "users anunturi date"
+                         "promotii promotii promotii";
+}
+
+#grid-pagina>*{
+    border: 2px solid var(--culoare-inchisa);
+    display: block;
+    padding: 1em;
+    margin-bottom: 10px;
+}
+
+#welcome{
+    grid-area: welcome;
+}
+#promotii{
+    grid-area: promotii;
+}
+
+#intrebari{
+    grid-area: intrebari;
+}
+
+#orar{
+    grid-area: orar;
+}
+
+#evenimente{
+    grid-area: evenimente;
+}
+
+#users_stats{
+    grid-area: users_stats;
+}
+
+#users{
+    grid-area: users;
+}
+
+#anunturi{
+    grid-area: anunturi;
+}
+
+#date{
+    grid-area: date;
+}
+
+@media screen and (max-width: 1200px) {
+
+    html{
+        font-size: 15px;
+    }
+    #grid-pagina{
+        gap:8px;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+
+    #grid-pagina{
+        display: block;
+        gap: 6px;
+    }
+
+    html{
+        font-size: 12px;
+    }
+    
+} 

@@ -1,0 +1,17 @@
+
+.watermark{
+    display: none;
+}
+
+nav{
+     --inaltime-meniu:2.2em;
+     --latime-buton:120px;
+}
+#acasa {
+    display: none;
+}
+
+#acasa-mediu {
+    display: block;
+}
+

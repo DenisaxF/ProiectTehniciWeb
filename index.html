@@ -26,6 +26,12 @@
 
         <link rel="stylesheet" href="resurse/css/main.css" type="text/css" />
         <link rel="stylesheet" href="resurse/css/layout.css" type="text/css" />
+        <link rel="stylesheet" href ="resurse/scss/nav-test.css" type="text/css"/>
+        <link rel="stylesheet" href ="resurse/css/nav1000.css" type="text/css" media="screen and (max-width: 1000px)"/>
+        <link rel="stylesheet" href ="resurse/scss/nav800-test.css" type="text/css" media="screen and (max-width: 800px)"/>
+        <link rel="stylesheet" href="resurse/css/stil-printare.css" type="text/css" media="print">
+
+
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,28 +49,52 @@
     </head>
 
     <body>
+        <div id="watermark">
+            Gheorghe
+            <br>
+            Florentina-Denisa
+        </div>
+        <br>
         <header>
             <h1>Bookshelf Boutique</h1>
-            <nav>
-                <ul>
-                    <li>Acasa
-                        <ul>
-                            <li><a href="#welcome">Bine ati venit</a></li>
-                            <li><a href="#promotii">Promotii</a></li>
-                            <li><a href="#intrebari">Intrebari</a></li>
-                            <li><a href="#orar">Orar</a></li>
-                            <li><a href="#users">Utilizatori</a></li>
-                            <li><a href="#users_stats">Utilizatori si statistici</a></li>
-                            <li><a href="#anunturi">Anunturi</a></li>
-                            <li><a href="#date">Date</a></li>
-                        </ul>
-                    </li>
-                    <li>Produse</li>
-                    <li>Contul meu</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
         </header>
+        <nav>
+            <label id="hamburger" for="ch-menu">
+                <!--<img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu">-->
+                <div class="container-hamburger">
+                    <div class="linie-sus"></div>
+                    <div class="linie-mijloc"></div>
+                    <div class="linie-jos"></div>
+                </div>
+            </label>
+            <input id="ch-menu" type="checkbox">
+            <ul class="meniu">
+                <li><div id="acasa">Acasa</div><div id="acasa-mediu"><span class="fas fa-house"></span></div>
+                    <ul>
+                        <li><a href="#welcome">Bine ati venit</a></li>
+                        <li><a href="#promotii">Promotii</a></li>
+                        <li><a href="#intrebari">Intrebari</a></li>
+                        <li><a href="#orar">Orar</a></li>
+                        <li><a href="#users">Utilizatori</a></li>
+                        <li><a href="#users_stats">Stats</a></li>
+                        <li><a href="#anunturi">Anunturi</a></li>
+                        <li><a href="#date">Date</a></li>
+                    </ul>
+                </li>
+                <li><a class="meniu-sus" href="#">Contul meu</a></li>
+                <li><a class="meniu-sus" href="#">Contact</a></li>
+                <li><div>Produse</div>
+                    <ul>
+                        <li><a href="http://www.google.com">Toate</a></li>
+                        <li><a href="#">Carti</a></li>
+                        <li><a href="#">Muzica</a></li>
+                        <li><a href="#">Jocuri</a></li>
+                        <li><a href="#">Accesorii</a></li>
+                        <li><a href="#">Papetarie</a></li> 
+                    </ul>
+                </li>
+            </ul>
+         </nav>
         <main>
             <div id="grid-pagina">
             <section id = "welcome">
@@ -215,9 +245,10 @@
                 <h2>Promotii</h2>
                 <section>
                     <h3>Super oferta de weekend</h3>
-                    <picture>
+                   <!-- <picture>
                         <img src="./resurse/imagini/weekend-offer.png" alt="error" />
                     </picture>
+                    -->
                     <p><span>Livrare gratuita la <b>comenzi online</b> de minim 100 de lei.</span></p>
                 </section>
                 <article>
@@ -280,12 +311,13 @@
                 <br/>
                 <a href="mailto:bookshelfB@gmail.com">Adresa de mail</a><i class="fa-solid fa-envelope fa-flip"></i>
                 <a href="tel:+40700707070">Telefon </a><i class="fa-solid fa-phone"></i>
-                <a href="https://wa.me/+40725928749" target="_blank">WhatsApp</a>
+                <a href="https://wa.me/+40725928749" target="_blank">WhatsApp</a> <i class="fa-brands fa-whatsapp"></i>
                 <br/>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.88430113932!2d26.097011776083935!3d44.43553547107568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f47f047%3A0x493984726f0235f9!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e0!3m2!1sro!2sro!4v1709987317713!5m2!1sro!2sro" 
-                width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </address>
             <p><small>Copyright &copy; <time datetime="2024-03-09"> 9 mar 2024</time></small></p>
+            <div id="banner"><p><small>Acesta este un proiect scolar</small></p></div>
         </footer>
 
     </body>
