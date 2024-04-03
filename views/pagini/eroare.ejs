@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="keywords" content="carti, papetarie, muzica, jocuri de societate, libraria Bookshelf Boutique, comenzi online">
+        <meta name="description" content="Avem carti de toate genurile, de la romane fantasy pana la carti istorice. Avem si albume de la diversi artisti, rechizite, carti de joc. Comenzi online cu livrari in orice oras">
+        <title>eroare</title>
+        <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css">
+        <%- include("../fragmente/head.ejs");  %> 
+
+
+    </head>
+    <body>
+    <main>
+        <div id="err-coloane">
+			<div id="err-imag">
+				<img src="<%- locals.imagine %>" />
+			</div>
+			<section>
+				<h2><%- locals.titlu %></h2>
+				<p><%- locals.text %></p>
+			</section>
+            <a href="/index">Go home</a>
+		</div>
+    </main>
+    </body>
+</html>

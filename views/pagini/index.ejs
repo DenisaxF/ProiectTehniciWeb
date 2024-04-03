@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang = 'ro'>
+    <head>
+        <%- include("../fragmente/head.ejs") %>
+        <meta name="description" content="Avem carti de toate genurile, de la romane fantasy pana la carti istorice. Avem si albume de la diversi artisti, rechizite, carti de joc. Comenzi online cu livrari in orice oras">
+        <meta name="keywords" content="carti, papetarie, muzica, jocuri de societate, libraria Bookshelf Boutique, comenzi online">  
+        <title>Libraria Bookshelf Boutique</title>
+
+    </head>
+    <body>
+        <div id="watermark">
+            Gheorghe
+            <br>
+            Florentina-Denisa
+        </div>
+        <br>
+        <%- include("../fragmente/header.ejs") %>
+        <main>
+            <div id="grid-pagina">
+            <section id = "welcome">
+                <h2>Bine ati venit</h2>
+                <ul>
+                    <!--<li><a href="pagina.html">Alta pagina</a></li>-->
+                    <!--<li><a href="http://www.google.com" target="_blank">Google</a></li>-->
+                </ul>
+                <figure>
+                    <picture>
+                        <source srcset="./resurse/imagini/ACOTAR-books-in-order_nou(2).jpg" media="(max-width: 700px)"/>
+                        <source srcset="./resurse/imagini/ACOTAR-books-in-order_nou(1).jpg" media="(max-width: 1200px)" />
+                        <img src = "./resurse/imagini/ACOTAR-books-in-order_nou.jpg" alt = "error" title="Carti"/>
+                    </picture>
+                    <figcaption>Seria Acotar</figcaption>
+                 </figure>
+                 <div id="container-video">
+                    <img class="farfurie" src = "/resurse/imagini/farfurie-flori-albastre.png" />
+                    <div id="centrare-video">
+                        <div id="clip-video">
+                            <div id="stil-video">
+                                <video width="320" height="240"  controls poster="resurse/imagini/poster-carte.jpg" preload="none">
+                                    <source src="resurse/video/video-book.mp4" type="video/mp4">
+                                    <source src="resurse/video/video-book (video-converter.com).mov" type="video/mov">
+                                    <track default src="resurse/video/tracks/video-book-ro.vtt" kind="captions" srclang="ro" label="romana">
+                                    <track src="resurse/video/tracks/video-book-en.vtt" kind="captions" srclang="en" label="engleza">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p><span><q>Only you can decide what breaks you!</q> Imbarca-te intr-o aventura fantastica cu spiridusi, zane, magie 
+                    si o iubire nu tocmai ca in basme. Una dintre cele mai cunoscute serii de <b>carti</b> ale celebrei autoare 
+                    Sarah J Mass te va purta in aceasta caltorie si te va face sa nu mai lasi cartea din mana.
+                </span></p>
+                <p><span>Afla mai multe despre autoarea cartilor "ACOTAR" si fii la curent cu ultimele ei lansari: 
+                    <a href="https://sarahjmaas.com/" target="_blank">Sarah J. Mass</a>
+                </span></p>
+
+               <div class ="container-iframe">
+                    <div class="taburi-iframe">
+                        <a id = "reading_guide" href="https://www.youtube.com/embed/wKndEF3RoDg?si=nCdjIa_AEL6exSK5" target="ifr-video"><b>Guide</b></a>
+                        <a id = "interview" href="https://www.youtube.com/embed/8AE3SyeWNcg?si=XqQbLPNdzRGO1oIU" target="ifr-video"><b>Interviu</b></a>
+                    </div>
+                    <iframe id="video" name = "ifr-video" width="560" height="315" src="https://www.youtube.com/embed/8AE3SyeWNcg?si=XqQbLPNdzRGO1oIU" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id = "orar">
+                <h2>Orar</h2>
+                <div class = "container-tabel">
+                    <div class = "tabel-scroll">
+                        <table id="tab-orar">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Cod</th>
+                                    <th>Perioadă</th>
+                                    <th>Zi</th>
+                                    <th>Interval dimineata</th>
+                                    <th>Pauza de masa</th>
+                                    <th>Interval seară</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td rowspan="5">Zile<br/>Lucrătoare</td>
+                                    <td>Luni</td>
+                                    <td>10-12</td>
+                                    <td>12-14</td>
+                                    <td>14-20</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    
+                                    <td>Marti</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    
+                                    <td>Miercuri</td>
+                                    <td>9-11</td>
+                                    <td>11-13</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    
+                                    <td>Joi</td>
+                                    <td>9-11</td>
+                                    <td>11-13</td>
+                                    <td>14-21</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    
+                                    <td>Vineri</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-19</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td rowspan="2">Weekend</td>
+                                    <td>Sambata</td>
+                                    <td>10-12</td>
+                                    <td>12-13</td>
+                                    <td>13-16</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Duminica</td>
+                                    <td>10-14</td>
+                                    <td>-</td>
+                                    <td>inchis</td>
+                                </tr>
+                            </tbody>
+                            <tfoot><tr><td colspan="6">Închis cu ocazia sărbătorilor legale sau când ne e mai lene așa.</td></tr></tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div id = "Descriere"><caption>Mai sus puteti vedea programul nostru</caption></div>
+            </section>
+            <section id = "evenimente">
+                <h2>Calendar evenimente</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi dolores ex ipsam quas, sunt consequatur neque accusamus ipsa ducimus doloremque, deserunt alias excepturi, quibusdam soluta odit distinctio repellat eos.</p>
+            </section>
+            <section id = "users_stats">
+                <h2>Date despre utilizator si statistici</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore distinctio impedit libero quo assumenda provident deleniti accusantium quibusdam! Totam esse magnam quam nihil voluptates nemo vel aut, odio obcaecati aliquam.</p>
+            </section>
+            <section id = "users">
+                <h2>Utilizatori</h2>
+                <p>Ip: <%- locals.ip %></p>
+                <p>Lorem, ipsum dolor sit </p>
+                <p>amet consectetur adipisicing elit.</p>
+                <p>Reprehenderit hic tempora minima libero </p>
+                <p>nisi fuga sapiente nihil, delectus modi ipsam adipisci,</p>
+                <p>laboriosam quaerat necessitatibus,</p> 
+                <p>suscipit autem quasi totam voluptatem veniam.</p>
+            </section>
+            <section id = "anunturi">
+                <h2>Anunturi</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic tempora minima libero nisi fuga sapiente nihil, delectus modi ipsam adipisci, laboriosam quaerat necessitatibus, suscipit autem quasi totam voluptatem veniam.</p>
+            </section>
+            <section id = "date">
+                <h2>Date despre site si server</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic tempora minima libero nisi fuga sapiente nihil, delectus modi ipsam adipisci, laboriosam quaerat necessitatibus, suscipit autem quasi totam voluptatem veniam.</p>
+            </section>
+            <section id = "promotii">
+                <h2>Promotii</h2>
+                <section>
+                    <h3>Super oferta de weekend</h3>
+                   <!-- <picture>
+                        <img src="./resurse/imagini/weekend-offer.png" alt="error" />
+                    </picture>
+                    -->
+                    <p><span>Livrare gratuita la <b>comenzi online</b> de minim 100 de lei.</span></p>
+                </section>
+                <article>
+                    <details><summary><h3>MEGA OFERTA!</h3></summary>
+                        <p><b>Libraria Bookshelf Boutique</b> ofera reduceri de <s>10%</s> <ins><b>15%</b></ins> 
+                            pentru orice produs din categoria <b>papetarie</b> pe toata perioada lunii septembrie.</p>
+                    </details>
+                </article>
+                <article>
+                    <details><summary><h3>Voucher cadou!</h3></summary>
+                        <p>La achizitia oricarui produs din sectiunea <b>muzica</b> primiti un voucher cadou in valoare de 30 de lei!</p>
+                    </details>
+                </article>
+                <article>
+                    <details><summary><h3>20% reducere la al doilea produs!</h3></summary>
+                        <p>Cumparati doua <b>jocuri de societate</b> si il primiti pe al doilea la pret redus cu 20%!</p>
+                        <p>Promotie valabila din 07/03/24 pana in 13/03/24!</p>
+                        <p>Exemplu de reducere aplicata asupra celui de al doilea joc: </p>
+                        <math class="math-block" xmlns = "http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mn>100</mn>
+                                <mo>-</mo>
+                                <mn>20</mn>
+                                <mo>%</mo>
+                                <mn>100</mn>
+                                <mo>=</mo>
+                                <mn>80</mn>
+                            </mrow>
+                        </math>
+                    </details>
+                </article>
+            </section>
+            <section id = "intrebari">
+                <h2>Intrebari frecvente</h2>
+                <details><summary> Se pot modifica comenzile dupa ce au fost inregistrate?</summary>
+                    <p>Nu, deoarece comenzile intra in procesare foarte repede pentru a ajunge la dumneavoastra in cel mai scurt timp.
+                        Deci orice modificari ulterioare sunt de cele mai multe ori indisponibile.
+                    </p>
+                </details>
+                <details><summary> Am vrut sa comand un produs etichetat ca "Indisponibil" dar nu am putut. De ce?</summary>
+                    <p>Produsele etichetate cu "Indisponibil" nu se mai afla in stoc si de aceea nu pot fi comandate.</p>
+                </details>
+                <details><summary> De unde pot cumpara un voucher?</summary>
+                    <p> Voucherele pot fi achizitionate fie direct din magazinele noastre, fie online.</p>
+                </details>
+                <details><summary>Livrati si in afara tarii?</summary>
+                    <p>Nu!</p>
+                </details>
+            </section>
+            </div>
+        </main>
+        <%- include("../fragmente/footer.ejs") %>
+    </body>
+
+</html>
