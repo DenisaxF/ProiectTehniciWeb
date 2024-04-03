@@ -1,0 +1,56 @@
+{
+    "cale_baza": "/resurse/imagini/erori",
+    "eroare_default":{
+        "titlu":"Eroare !!!",
+        "text": "A survenit eroare.",
+        "imagine":"interzis.png"
+    },
+    "info_erori": [
+        {
+            "identificator":404,
+            "status":true,
+            "titlu":"Hmm...",
+            "text": "Error 404: Fisierul pe care il cautati nu se afla pe acest server!!",
+            "imagine":"lupa.png"
+        },
+        {
+            "identificator":403,
+            "status":true,
+            "titlu":"Oops!",
+            "text": "Error 403: Nu aveti acces catre aceste fisiere!",
+            "imagine":"no-entry.png"
+        },
+        {
+            "identificator":400,
+            "status":true,
+            "titlu":"Bad request!",
+            "text": "Error 400: Cerere gresita! Ati dorit sa cereti un alt fisier?",
+            "imagine":"free-emoji-clipart-21.jpg"
+        },
+        
+        {
+            "identificator":1,
+            "status":false,
+            "titlu":"Site în lucru",
+            "text": "Va rugam reveniti mai tarziu!",
+            "imagine":"interzis.png"
+        },
+        
+        {
+            "identificator":503,
+            "status":false,
+            "titlu":"Error 503- Too many requests!",
+            "text": "Serverul este suprasolicitat la momentul de fata!Ne cerem scuze pentru inconvenienta!",
+            "imagine":"interzis.png"
+        },
+        
+        {
+            "identificator":3,
+            "status":false,
+            "titlu":"Date gresit",
+            "text": "Reintroduceti datele!",
+            "imagine":"interzis.png"
+        }
+    ]
+}
+  
