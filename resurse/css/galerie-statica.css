@@ -1,0 +1,55 @@
+#galerie-statica{
+  padding-left:var(--padding-intern);
+  padding-right:var(--padding-intern);
+}
+
+#grid-galerie {
+ display:grid;
+ grid-template-columns: repeat(3,1fr);
+ grid-row-gap:0.5em;
+ grid-column-gap:0.5em;
+ counter-reset: nrimag 0;  /* nrimag=3 */
+}
+#grid-galerie img{
+  width: 100%;
+  filter: brightness(50%);
+  transition: filter 1.2s linear;
+}
+#grid-galerie figcaption{
+  text-align:center;
+  counter-increment: nrimag 1; /* nrimag+=2 */
+  color: initial;
+  background-color: initial;
+  transition: all 1.2s linear;
+}
+
+#grid-galerie img:hover{
+  filter: brightness(100%);
+  cursor: pointer;
+}
+
+#grid-galerie figure:hover figcaption{
+  color: var(--culoare1);
+  background-color: var(--culoare2);
+}
+
+#grid-galerie figcaption::before{
+  content: counter(nrimag, decimal-leading-zero) ")";
+}
+
+@media screen and (max-width: 800px) {
+  #grid-galerie {
+    grid-template-columns: repeat(2, 1fr); /* Două coloane pe ecrane medii */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #grid-galerie {
+    grid-template-columns: 1fr; /* O singură coloană pe ecrane mici */
+    display:block;
+  }
+}
+
+#grid-galerie figure:nth-child(2){
+  grid-area: 1/2/2/3;
+}

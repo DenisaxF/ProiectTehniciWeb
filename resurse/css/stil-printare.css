@@ -18,7 +18,8 @@ header h1 {
 }
 
 /* Afiseaza meniul sub forma de lista neordonata */
-nav ul {
+
+nav ul{
     display: block;
     list-style-type: none;
     color: var(--culoare-text);

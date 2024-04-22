@@ -5,6 +5,7 @@ body{
   --culoare-si-mai-inchisa: #661466;
   --culoare-text: black;
   --culoare-text-subliniat: white;
+  --culoare-fundal: #f2f5f5;
 
   --spatiere:100px;
   padding-left:var(--spatiere);
@@ -24,12 +25,26 @@ table {
 	border-spacing: 0;
 }
 
+header img{
+  float:left;
+  top: 0;
+}
+
+header{
+  top: 0;
+}
+
+/*header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}*/
+
 header h1{
     display: flex;
     justify-content: flex-start;
     text-align: center;
-    text-decoration: underline;
-    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    text-decoration:wavy;
 }
 
 footer {
@@ -155,8 +170,8 @@ th, td{
     /*border: 5px solid var(--culoare1);*/
     flex-direction: column-reverse;
     /*flex-direction: column-reverse;*/
-    width: fit-content;
-    height: fit-content;
+    width: 30%;
+    height: auto;
     
   }
 
@@ -168,19 +183,21 @@ th, td{
 
   .container-iframe iframe{
     width: 100%;
-    
   }
 
   .taburi-iframe{
     display:flex;
     flex-direction:row;
     opacity: 0.7;
-    width: 25%;
+    width: 100%;
+    justify-content: flex-end;
   }
 
   .taburi-iframe>a{
     display:block;
-    border: 2px solid var(--culoare-inchisa);
+    border: 2px solid var(--culoare1);
+    border-top: none;
+    box-shadow: var(--culoare1);
     border-bottom-left-radius: 30%;
     border-bottom-right-radius: 30%;
     height: 1em;
@@ -191,6 +208,13 @@ th, td{
     background-color: var(--culoare2);
     text-decoration: none;
     transition: all 0.75s linear;
+    box-sizing: content-box;
+    
+  }
+
+  .taburi-iframe>#reding_guide b{
+    justify-content: center;
+    text-align: center;
   }
 
   .taburi-iframe>#reading_guide:hover{
@@ -208,6 +232,60 @@ th, td{
   figure{
     display: block;
   }
+
+  address{
+    margin-left: 10px;
+  }
+
+  summary:hover{
+    cursor: pointer;
+  }
+
+
+  #text {
+    position: relative;
+}
+
+#text h2, #text_reflectat h2 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+#text_reflectat {
+  position:absolute;
+	left:0;
+	top:100%;
+	transform-origin:0 0;
+	/*conetaza ordinea transformarilor!*/
+	transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px,-25px); 
+	opacity:0.55;
+}
+
+#text:hover #text_reflectat {
+  transform: scaleY(2); /* Alungește reflexia când se trece cursorul peste text */
+}
+
+.text-container {
+  overflow: hidden; 
+  width: 50%;
+}
+
+.marquee {
+  white-space: nowrap; /* Face ca textul să se afișeze pe o singură linie */
+  animation: marquee 10s linear infinite; 
+  width: 100%;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(100%); /* Începe de la extrema dreaptă */
+  }
+  100% {
+      transform: translateX(-100%); /* Se termină la extrema stângă */
+  }
+}
+
 
   /*.taburi-iframe:hover>#interview{
     opacity: 1;

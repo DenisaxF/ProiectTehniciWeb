@@ -1,3 +1,6 @@
+#grid-pagina a, footer a{
+    color: var(--culoare2);
+}
 #grid-pagina a:visited, footer a:visited{
     color: var(--culoare1);
 }
@@ -24,8 +27,9 @@ main a{
     display: inline-block;
     position:relative;
     background-image: radial-gradient( var(--culoare-inchisa) 0%, var(--culoare-inchisa) 40%, transparent 80%, transparent 100%);
-    background-size: 0%;
+    background-size: 0% 0%;
     background-position: center;
+    background-repeat: no-repeat;
     transition: background-size 1s linear;
 }
 
