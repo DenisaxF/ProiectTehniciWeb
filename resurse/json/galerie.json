@@ -1,0 +1,89 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier":"bac.png",
+            "nume_imag": "bac Mate",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Culegere bac matematica",
+			"intervale_ore":[[2, 7], [12, 16]]
+		},
+		{
+			"fisier":"bacromana.png",
+            "nume_imag": "bac Romana",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Culegere bac romana",
+			"intervale_ore":[[0, 2], [12, 16], [17, 21], [22, 23]]
+			
+		},
+		{
+			"fisier":"rsz_1bc.png",
+            "nume_imag": "banda celor 6 ciori",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Banda celor 6 ciori vol 1",
+			"intervale_ore":[[0, 11], [12, 18], [19, 21], [22, 23]]
+		},
+		{
+			"fisier":"casapamantului.png",
+            "nume_imag": "Casa",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Casa Pamantului",
+            "intervale_ore":[[2, 7], [14, 19], [22, 23]]
+		},
+		{
+			"fisier":"dezvoltarepers.png",
+            "nume_imag": "Carte dezvoltare personala",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Pachet dezvoltare personala",
+            "intervale_ore":[[2, 7], [12, 18], [19, 23]]
+		},
+		{
+			"fisier":"istorie.png",
+            "nume_imag": "istorie",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Carte de istorie"
+		},
+		{
+			"fisier":"la-rascruce.png",
+            "nume_imag": "rascruce",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"La rascruce de vanturi"
+        },
+        {
+            "fisier":"lord.png",
+            "nume_imag": "lord of the rings",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Seria Lord of the rings"
+		},
+        {
+            "fisier":"manualmate.png",
+            "nume_imag": "manual",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Manual de matematica clasa a 5 a"
+        },
+        {
+            "fisier":"rsz_1atlas.png",
+            "nume_imag": "atlas",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Atlas de geografie"
+        },
+        {
+            "fisier":"rsz_pacienta.png",
+            "nume_imag": "pacienta tacuta",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Pacienta tacuta"
+        },
+        {
+            "fisier":"seriedune.png",
+            "nume_imag": "Dune",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Seria Dune"
+        },
+        {
+            "fisier":"serpent_and_dove.png",
+            "nume_imag": "carti",
+            "alternativ": "text alternativ imagine",
+			"descriere_imag":"Trilogia sarpe si porumbel"
+        }
+	]
+}
