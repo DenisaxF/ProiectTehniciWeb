@@ -20,6 +20,7 @@
             <div id="grid-pagina">
             <section id = "welcome">
                 <h2>Bine ati venit</h2>
+                <button type="button" class="btn btn-primary btn-lg">Stil-1-mare</button>
                 <ul>
                     <!--<li><a href="pagina.html">Alta pagina</a></li>-->
                     <!--<li><a href="http://www.google.com" target="_blank">Google</a></li>-->
@@ -52,8 +53,7 @@
                     Sarah J Mass te va purta in aceasta caltorie si te va face sa nu mai lasi cartea din mana.
                 </span></p>
                 <p><span>Afla mai multe despre autoarea cartilor "ACOTAR" si fii la curent cu ultimele ei lansari: 
-                    <a href="https://sarahjmaas.com/" target="_blank">Sarah J. Mass</a>
-                </span></p>
+                <a href="https://sarahjmaas.com/" target="_blank">Sarah J. Mass</a></span></p>
 
                <div class ="container-iframe">
                     <div class="taburi-iframe">
@@ -65,7 +65,12 @@
                 </div>
             </section>
             <section id = "orar">
-                <h2>Orar</h2>
+                <div id = "text">
+                    <h2>Orar</h2>
+                    <div id = "text_reflectat">
+                        <h2>Orar</h2>
+                    </div>
+                </div>
                 <div class = "container-tabel">
                     <div class = "tabel-scroll">
                         <table id="tab-orar">
@@ -180,11 +185,12 @@
                 <h2>Promotii</h2>
                 <section>
                     <h3>Super oferta de weekend</h3>
-                   <!-- <picture>
-                        <img src="./resurse/imagini/weekend-offer.png" alt="error" />
-                    </picture>
-                    -->
-                    <p><span>Livrare gratuita la <b>comenzi online</b> de minim 100 de lei.</span></p>
+                    <div class = "text-container">
+                        <div class = "marquee">
+                            <p><span>Livrare gratuita la <b>comenzi online</b> de minim 100 de lei.</span></p>
+                        </div>
+                    </div>
+    
                 </section>
                 <article>
                     <details><summary><h3>MEGA OFERTA!</h3></summary>
@@ -234,6 +240,35 @@
                 </details>
             </section>
             </div>
+            <section id = "galerie-statica">
+                <h2>Galerie</h2>
+                <div id = "grid-galerie">
+                    <% 
+                       /* vLuni=["ianuarie", "februarie", "martie", "aprilie", "iunie", "iulie"];
+                        var d = new Date();
+                        var lunaCurenta = vLuni[d.getMonth()];*/
+                        //var intervaleOrare = [ [0, 8], [9, 14], [15, 20], [21, 23]];
+                        var d = new Date();
+                        var oraCurenta = d.getHours();
+                        for (let imag of locals.imagini) {
+                            if (imag.intervale_ore) {
+                                for (let interval of imag.intervale_ore) {
+                                    if (oraCurenta >= interval[0] && oraCurenta <= interval[1]) {
+                                        %>
+                                        <figure>
+                                            <picture>
+                                                <source srcset="<%= imag.fisier.mediu %>" media="(max-width:1200px)" />
+                                                <img src="<%= imag.fisier %>" alt="<%= imag.alternativ %>" />
+                                            </picture>
+                                            <figcaption><%= imag.descriere_imag %></figcaption>
+                                        </figure>
+                                    <% } %>
+                                <% } %>
+                            <% } %>
+                      <%  } %>
+
+                </div>
+            </section>
         </main>
         <%- include("../fragmente/footer.ejs") %>
     </body>
