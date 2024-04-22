@@ -1,0 +1,124 @@
+nav {
+  --inaltime-meniu:2.5em;
+  --latime-buton:150px;
+  height: var(--inaltime-meniu);
+  background-color: var(--culoare1);
+}
+
+#watermark {
+  display: none;
+}
+
+#hamburger, #ch-menu {
+  display: none;
+}
+
+#acasa-mediu {
+  display: none;
+}
+
+.meniu, .meniu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--culoare1);
+}
+
+.meniu {
+  display: flex;
+}
+.meniu li {
+  width: var(--latime-buton);
+  height: var(--inaltime-meniu);
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.meniu div, .meniu a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  line-height: var(--inaltime-meniu);
+  color: var(--culoare-text-subliniat);
+  text-decoration: none;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: all 0.7s linear;
+}
+.meniu ul {
+  display: none;
+  animation: animatie_submeniu 1s linear 1 forwards;
+  transition: all 1s linear;
+}
+
+.meniu li > div {
+  position: relative;
+}
+.meniu li > div:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  transition: width 0.7s ease, height 0.7s ease, background-color 0.7s ease;
+}
+.meniu li > div:hover::after {
+  width: 100%;
+  height: 100%;
+  background-color: var(--culoare-text-subliniat);
+  opacity: 0.5;
+  background-size: cover;
+  background-repeat: no repeat;
+}
+
+.meniu-sus {
+  position: relative;
+}
+.meniu-sus:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  transition: width 0.7s ease, height 0.7s ease, background-color 0.7s ease;
+}
+.meniu-sus:hover::after {
+  width: 100%;
+  height: 100%;
+  background-color: var(--culoare-text-subliniat);
+  opacity: 0.5;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.meniu li:hover > ul {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  opacity: 0;
+  transform: scaleX(0) scaleY(0);
+  transform-origin: top left;
+}
+.meniu li > ul > li:hover > a {
+  background-color: var(--culoare2);
+  color: var(--culoare-text);
+  text-shadow: 1px 1px 0 var(--culoare-text-subliniat), -1px -1px 0 var(--culoare-text-subliniat), 1px -1px 0 var(--culoare-text-subliniat), -1px 1px 0 var(--culoare-text-subliniat);
+}
+
+.meniu li ul li {
+  transition: all 0.7s linear;
+}
+
+@keyframes animatie_submeniu {
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}
