@@ -1,0 +1,34 @@
+{
+    "oferte": [
+        {
+            "categorie": "horror",
+            "data-incepere": "2024-05-27T07:50:00.235Z",
+            "data-finalizare": "2024-05-27T08:00:00.235Z",
+            "reducere": 45
+        },
+        {
+            "categorie": "sf",
+            "data-incepere": "2024-05-27T07:48:00.971Z",
+            "data-finalizare": "2024-05-27T07:58:00.971Z",
+            "reducere": 5
+        },
+        {
+            "categorie": "horror",
+            "data-incepere": "2024-05-27T07:46:00.420Z",
+            "data-finalizare": "2024-05-27T07:56:00.420Z",
+            "reducere": 15
+        },
+        {
+            "categorie": "sf",
+            "data-incepere": "2024-05-27T07:44:00.289Z",
+            "data-finalizare": "2024-05-27T07:54:00.289Z",
+            "reducere": 5
+        },
+        {
+            "categorie": "scoala",
+            "data-incepere": "2024-05-27T07:42:00.969Z",
+            "data-finalizare": "2024-05-27T07:52:00.969Z",
+            "reducere": 35
+        }
+    ]
+}
