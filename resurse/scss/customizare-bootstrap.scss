@@ -2,9 +2,7 @@
 (
     $primary:  #b224b3,
     $secondary: pink,
-    $btn-color: #661466,/*
-    $screen-md: 800px !default,
-    $screen-lg: 1200px !default,*/
+    $btn-color: #661466,
     $border-radius: 10px,
     $h1-font-size: 32px,
     $h2-font-size: 24px,
@@ -12,10 +10,18 @@
     $h4-font-size: 18px,
     $h5-font-size: 16px,
     $h6-font-size: 14px,
-    $font-family-base: "Wix Madefor Display" sans-serif
-   
+    $font-family-base: "Wix Madefor Display" sans-serif,
+    $form-range-track-cursor:  pointer,
 
 );
+
+button{
+  margin: 0.5rem;
+}
+
+.col{
+  margin-bottom: 10px;
+}
 
 .taburi-iframe{
     display:flex;
@@ -47,4 +53,8 @@
   .taburi-iframe>#reding_guide b{
     justify-content: center;
     text-align: center;
+  }
+
+  ul .pagination{
+    --bs-pagination-color: none;
   }
