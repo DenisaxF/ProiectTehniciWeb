@@ -34,10 +34,51 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
 
+        
+
         <script defer>
+          
             MathJax.Hub.Config({
               MathML: {
                 extensions: ["mml3.js"]
               }
             });
-           </script>
+        </script>
+        
+        <script src="/resurse/js/cookies.js"></script>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+              const oferta = JSON.stringify(ofertaCurenta);
+              const countdownElement = document.getElementById('countdown');
+              const ofertaElement = document.getElementById('oferta');
+              const expirare = new Date(oferta["data-finalizare"]);
+  
+              function updateCountdown() {
+                  const now = new Date();
+                  const timeLeft = expirare - now;
+
+                  /*console.log('expirare:', expirare);
+                  console.log('now:', now);*/
+                  console.log('expirare:', expirare)
+                  console.log('oferta:', oferta);
+  
+                  if (timeLeft <= 0) {
+                      ofertaElement.style.display = 'none';
+                      return;
+                  }
+  
+                  const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  
+                  countdownElement.textContent = `${hours}h ${minutes}m ${seconds}s`;
+  
+                  if (timeLeft <= 1000) { // Ultimele 10 secunde
+                      countdownElement.style.color = 'red';
+                  }
+             }
+  
+              setInterval(updateCountdown, 1000);
+          })
+        </script>

@@ -13,66 +13,159 @@
     <%- include("../fragmente/header") %>
 
     <main>
-        <label> Nume: <input type="text" id="inp-nume"></label>
-        <!--<label> Maxim calorii: <input type="number" id="inp-calorii" value="10000"></label>-->
-        <div> Calorii:<!-- trebuie sa aiba acelasi name ca sa formeze un grup -->
-            <p><label>Dietetic (calorii &lt; 350)
-                <input id="i_rad1"  name="gr_rad" value="0:350" type="radio"/>
-            </label></p>
-            <p><label>Mediu (350 &le; calorii &lt; 700)
-                <input id="i_rad2"  name="gr_rad" value="350:750" type="radio"/>
-            </label>
-            <p><label>Ridicat caloric (700 &le; calorii)
-                <input id="i_rad3" name="gr_rad" value="700:1000000000" type="radio"/>
-            </label>
-            <p><label>Toate
-                <input id="i_rad4" checked name="gr_rad" value="toate" type="radio"/>
-            </label>
+        <!--<div class ="container">
+            <div class = "row mb-2">
+                <div class = "col-md-4">
+                    <label>
+                        Titlu: <form class="form-floating">
+                            <textarea class = "form-control" id="inp-nume" placeholder="text"></textarea>
+                            <label for="inp-nume">Introduceti titlul</label>
+                        </form>
+                    </label>
+                </div>-->
+
+                <!--<div class="container mt-5">-->
+                <!--   <div class = "col-md-4">
+                        <h4>Nr_pagini:</h4>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-primary">
+                                <input type="radio" name="gr_rad" id="i_rad1" value="0:350"> Pentru lenesi (pagini &lt; 350)
+                            </label>
+                            <label class="btn btn-outline-primary">
+                                <input type="radio" name="gr_rad" id="i_rad2" value="350:750"> Pentru cititori (350 &le; pagini &lt; 700)
+                            </label>
+                            <label class="btn btn-outline-primary">
+                                <input type="radio" name="gr_rad" id="i_rad3" value="700:1000000000"> Pentru legende/intelectuali/nebuni (700 &le; pagini)
+                            </label>
+                            <label class="btn btn-outline-primary active">
+                                <input type="radio" name="gr_rad" id="i_rad4" value="toate" checked> Toate
+                            </label>
+                        </div>
+                    </div>-->
+                <!--</div>-->
+            <!--</div>-->
+       <!-- </div>
+
+        <div class = "container2">
+            <div class = "row mb-3">
+                <div class = "col-md-3">
+                    <label> Pret minim: <input type="range" class = "form-range" id="inp-pret" value="0" min="0"  max="70"> <span id="infoRange">(0)</span></label>
+                </div>
+
+                <div class = "col-md-3">
+                    <label>Select simplu:
+                        <select id="inp-categorie">
+                            <option id="sel-toate" selected value="toate">toate</option>
+                           --> <!--Trebuie sa ii dam copy paste in header ejs la meniu pentru a lke face optiuni-->
+                        <!--</select>
+                    </label>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="container">
+            <div class="row row-cols-2">
+                <div class = "col">
+                    <label>
+                        Titlu: <form class="form-floating">
+                            <textarea class = "form-control" id="inp-nume" placeholder="text"></textarea>
+                            <label for="inp-nume">Introduceti titlul</label>
+                        </form>
+                    </label>
+                </div>
+
+                <div class = "col">
+                    <h4>Nr_pagini:</h4>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-primary">
+                            <input type="radio" name="gr_rad" id="i_rad1" value="0:350"> Pentru lenesi (pagini &lt; 350)
+                        </label>
+                        <label class="btn btn-outline-primary">
+                            <input type="radio" name="gr_rad" id="i_rad2" value="350:750"> Pentru cititori (350 &le; pagini &lt; 700)
+                        </label>
+                        <label class="btn btn-outline-primary">
+                            <input type="radio" name="gr_rad" id="i_rad3" value="700:1000000000"> Pentru legende/intelectuali/nebuni (700 &le; pagini)
+                        </label>
+                        <label class="btn btn-outline-primary active">
+                            <input type="radio" name="gr_rad" id="i_rad4" value="toate" checked> Toate
+                        </label>
+                    </div>
+                </div>
+
+                <div class = "col">
+                    <label> Pret minim: <input type="range" class = "form-range" id="inp-pret" value="0" min="0"  max="70"> <span id="infoRange">(0)</span></label>
+                </div>
+                <div class = "col">
+                    <label>Select simplu:
+                        <select id="inp-categorie">
+                            <option id="sel-toate" selected value="toate">toate</option>
+                            <% for (let opt of locals.optiuni) { %>
+                                <option value="<%- opt.unnest %>"><%- opt.unnest %> </option>
+                            <% } %> <!--Trebuie sa ii dam copy paste in header ejs la meniu pentru a lke face optiuni-->
+                        </select>
+                    </label>
+                </div>
+            </div>
         </div>
-
-
-        <label> Pret minim: <input type="range" id="inp-pret" value="0" min="0"  max="70"> <span id="infoRange">(0)</span></label>
-        <label>Select simplu:
-            <select id="inp-categorie">
-                <option id="sel-toate" selected value="toate">toate</option>
-                <% for (let opt of locals.optiuni) { %>
-                    <option value="<%- opt.unnest %>"><%- opt.unnest %> </option>
-                <% } %> <!--Trebuie sa ii dam copy paste in header ejs la meniu pentru a lke face optiuni-->
-            </select>
-        </label>
+        
         <p>
-        <button id="filtrare">Filtreaza</button> 
+        <button id="filtrare" class="btn btn-primary btn-lg">Filtreaza</button> 
 
-        <button id="resetare">Reseteaza</button><br/>
-        <button id="sortCrescNume">Sorteaza crescator dupa pret si nume</button>
-        <button id="sortDescrescNume">Sorteaza descrescator dupa pret si nume</button>
+        <button id="resetare" class="btn btn-primary btn-lg">Reseteaza</button><br/>
+        <button id="sortCrescNume" class="btn btn-primary btn-lg">Sorteaza crescator dupa pret si nume</button>
+        <button id="sortDescrescNume" class="btn btn-primary btn-lg">Sorteaza descrescator dupa pret si nume</button>
         
         </p>
         
+        <p><div id="product-count">Numărul total de produse afișate: <span id="count">0</span></div></p>
+
         <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
         <section id="produse">
             <h2>Produse</h2>
+            <div id="no-products-message" style="display: none;">Nu există produse conform filtrării curente</div>
             <div class="grid-produse">
                 <% for( let prod of locals.produse) { %>
-                    <article class="produs" >
-                        <h3 class="nume">Nume: <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
-                        <div class="info-prod">
-                            <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
-                            <p class="calorii">Calorii: <span class="val-calorii"><%- prod.calorii%></span></p>
-                            <p class="gramaj">Gramaj: <span class="val-gramaj"><%- prod.gramaj%></span></p>
-                        </div>
-                        <p class="categorie">Categorie:<span class="val-categorie"><%- prod.categorie%></span></p>
-                        <figure>
-                            <a href="/produs/<%-prod.id %>" ><img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]" /></a>
-                        </figure>
-                        <label class="selecteaza-cos">
-                            Selectează:<br/>
-                            <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
-                        </label>
-                    </article>
+                        <article class="produs" >
+                            <% if (prod.pret === locals.celMaiIeftinPeCategorie[prod.gen]) { %>
+                                <div class = "banner-ieftin" >
+                                    Cel mai ieftin din <%-prod.gen%>
+                                </div>
+                            <% } %>
+                            <p><h3 class="nume"> <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.titlu%></span></a></h3></p>
+                            <figure>
+                                <a href="/produs/<%-prod.id %>" ><img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod.titlu %>]" /></a>
+                            </figure></br>
+                            <div class="info-prod">
+                                <% if(prod.gen === ofertaCurenta.categorie) { %>
+                                   <p class="pret">Pret vechi: <span class="val-pret"><s><%- prod.pret %></s></span></p>
+                                    <p class="pret">Pret nou: <span class="val-pret"><%- (prod.pret * (1 - ofertaCurenta.reducere / 100)).toFixed(2) %></span></p>
+                                <% } else { %>
+                                    <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
+                               <% } %>
+                                <p class="nr_pagini">Pagini: <span class="val-calorii"><%- prod.nr_pagini%></span></p>
+                                <p class="autor">Autor: <span class="val-gramaj"><%- prod.autor%></span></p>
+                            </div>
+                            <p class="categorie">Categorie:<span class="val-categorie"><%- prod.gen%></span></p></br>
+                            
+                        
+                            <label class="selecteaza-cos">
+                                Selectează:
+                                <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
+                            </label>
+                        </article>
                 <% }%>
             </div>
         </section>
+
+        <div class="paginatie" aria-label="Page navigation">
+            <ul class="pagination">
+                <% for(let i = 1; i <= numarPagini; i++) { %>
+                    <li class="page-item <%= i === paginaCurenta ? 'active' : '' %>">
+                        <a class="page-link" href="/produse?pagina=<%= i %>"><%= i %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
     </main>
 
     <%- include("../fragmente/footer") %>

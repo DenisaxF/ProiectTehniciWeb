@@ -1,8 +1,22 @@
         <header>
             <img src = "resurse/imagini/icon-titlu3.png" alt = "error" title="Carti"/>
             <h1>Bookshelf Boutique</h1>
+            
+            <!--<button id="schimba_tema" class="tema-light">
+                <i id = "icon-tema" class="fas fa-moon"></i>
+            </button>-->
+
+            <!-- Bootstrap 5 switch -->
+            <div class="form-check form-switch">
+                <input class="form-check-input"type="checkbox" id="darkModeSwitch" checked>
+                <label class="form-check-label" for="darkModeSwitch"> <i id = "icon-tema" class="fas fa-moon"></i></label>
+            </div>
+            <p><label id = "buton_sepia">Sepia
+                <input id ="theme-sepia" name="theme" value="sepia" type="radio"/>
+            </label></p>
+            <script src = "/resurse/js/tema.js"></script>
         </header>
-        <nav>
+        <nav class="bara-meniu">
             <label id="hamburger" for="ch-menu">
                 <!--<img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu">-->
                 <div class="container-hamburger">
@@ -25,12 +39,18 @@
                         <li><a href="/index#date">Date</a></li>
                     </ul>
                 </li>
-                <li><a class="meniu-sus" href="#">Contul meu</a></li>
+                <li><a class="meniu-sus" href="/inregistrare">Contul meu</a></li>
                 <li><a class="meniu-sus" href="#">Contact</a></li>
+                <%- include("../fragmente/submeniu-administrare.ejs")%>
+                <%- include("../fragmente/submeniu-utilizator-logat.ejs")%>
                 <li><div>Produse</div>
                     <ul>
-                        <!--<li><a href="http://www.google.com">Toate</a></li>-->
-                        <li><a href="#">Carti</a></li>
+                        <li><a href="/produse">Carti</a></li>
+                        <li><a href="/produse?tip=nemira">Editura Nemira</a></li>
+                        <li><a href="/produse?tip=arthur">Editura arthur</a></li>
+                        <li><a href="/produse?tip=TREI">Editura TREI</a></li>
+                        <li><a href="/produse?tip=paralela 45">Paralela 45</a></li>
+                        <li><a href="/produse?tip=leda edge">Editura leda edge</a></li>
                         <li><a href="#">Muzica</a></li>
                         <li><a href="#">Jocuri</a></li>
                         <li><a href="#">Accesorii</a></li>

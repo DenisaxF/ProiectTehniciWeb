@@ -8,7 +8,7 @@
         <title>Libraria Bookshelf Boutique</title>
 
     </head>
-    <body>
+    <body class = "dark">
         <div id="watermark">
             Gheorghe
             <br>
@@ -20,11 +20,19 @@
             <div id="grid-pagina">
             <section id = "welcome">
                 <h2>Bine ati venit</h2>
+                <%- include("../fragmente/formular-login.ejs")%>
+                <%- locals.optiuniMeniu[0].unnest %>
                 <button type="button" class="btn btn-primary btn-lg">Stil-1-mare</button>
                 <ul>
                     <!--<li><a href="pagina.html">Alta pagina</a></li>-->
                     <!--<li><a href="http://www.google.com" target="_blank">Google</a></li>-->
                 </ul>
+                <div id="oferta">
+                    <h2 style="color: red; font-weight: bold;">Ofertă NOUA!</h2>
+                    <p>Categorie: <%= ofertaCurenta.categorie %></p>
+                    <p>Reducere: <%= ofertaCurenta.reducere %>%</p>
+                    <p>Expiră în: <span id="countdown"></span></p>
+                </div>
                 <figure>
                     <picture>
                         <source srcset="./resurse/imagini/ACOTAR-books-in-order_nou(2).jpg" media="(max-width: 700px)"/>
@@ -38,7 +46,7 @@
                     <div id="centrare-video">
                         <div id="clip-video">
                             <div id="stil-video">
-                                <video width="320" height="240"  controls poster="resurse/imagini/poster-carte.jpg" preload="none">
+                                <video width="320" height="240"  controls poster="resurse/imagini/rsz_poster-carte.jpg" preload="none">
                                     <source src="resurse/video/video-book.mp4" type="video/mp4">
                                     <source src="resurse/video/video-book (video-converter.com).mov" type="video/mov">
                                     <track default src="resurse/video/tracks/video-book-ro.vtt" kind="captions" srclang="ro" label="romana">
