@@ -11828,6 +11828,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+button {
+  margin: 0.5rem;
+}
+
+.col {
+  margin-bottom: 10px;
+}
+
 .taburi-iframe {
   display: flex;
   flex-direction: row;
@@ -11857,4 +11865,8 @@ textarea.form-control-lg {
 .taburi-iframe > #reding_guide b {
   justify-content: center;
   text-align: center;
+}
+
+ul .pagination {
+  --bs-pagination-color: none;
 }

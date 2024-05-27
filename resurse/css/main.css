@@ -6,11 +6,87 @@ body{
   --culoare-text: black;
   --culoare-text-subliniat: white;
   --culoare-fundal: #f2f5f5;
+  --culoare-fundal2: white;
 
   --spatiere:100px;
   padding-left:var(--spatiere);
   padding-right:var(--spatiere);
   line-height: 1.5;
+}
+
+body.dark{
+  --culoare1: #451966;
+  --culoare2: #b224b3;
+  --culoare-inchisa: #3C1E50;
+  --culoare-si-mai-inchisa: #331546;
+  --culoare-text: white;
+  --culoare-text-subliniat: white;
+  /*--culoare-fundal: #424242;*/
+    --culoare-fundal: #483248;
+  /*--culoare-fundal2: #4B474E;*/
+  --culoare-fundal2: #BDB5D5;
+
+  --spatiere:100px;
+  padding-left:var(--spatiere);
+  padding-right:var(--spatiere);
+  line-height: 1.5;
+}
+
+body.sepia{
+  /*--culoare1: #dcc1a7;*/
+  --culoare1: #ffb640;
+  --culoare2: beige;
+  --culoare-inchisa: #d4b595;
+  --culoare-si-mai-inchisa: #cda882;
+  --culoare-text: black;
+  --culoare-text-subliniat: white;
+  --culoare-fundal: #e7ca70;
+  --culoare-fundal2: 	#e3ceb9;
+
+  background-image: url("/resurse/imagini/background/brown-scratched-textured-paper-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 90%;
+
+  --spatiere:100px;
+  padding-left:var(--spatiere);
+  padding-right:var(--spatiere);
+  line-height: 1.5;
+}
+
+#buton_sepia{
+  display: flex;
+  /*border:1px solid #331546;*/
+  justify-content: center;
+  width: 20%;
+  margin-top: 0.5rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px;
+  transition: all 0.5s linear;
+  
+  border-radius: 10px;
+}
+  
+
+#buton_sepia:hover{
+  background-color: var(--culoare1);
+  color: #fff;
+  cursor: pointer;
+}
+
+#oferta{
+  display: flex;
+  flex-direction: column;
+  right: -.6rem;
+  border-radius: 10px;
+  background-color: var(--culoare2);
+  color: var(--culoare-text);
+  width: 30%;
+  text-align: center;
+  box-shadow: 1px 0 0 3px var(--culoare-fundal);
+  margin-bottom: .4rem;
+  
 }
 
 ol, ul {
@@ -45,6 +121,7 @@ header h1{
     justify-content: flex-start;
     text-align: center;
     text-decoration:wavy;
+    color: var(--culoare-text);
 }
 
 footer {
@@ -252,7 +329,7 @@ th, td{
     font-weight: bold;
 }
 
-#text_reflectat {
+#text_reflectat{
   position:absolute;
 	left:0;
 	top:100%;
@@ -260,11 +337,16 @@ th, td{
 	/*conetaza ordinea transformarilor!*/
 	transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px,-25px); 
 	opacity:0.55;
+  transition: transform 1s ease;
+  overflow: hidden;
+ 
 }
 
-#text:hover #text_reflectat {
-  transform: scaleY(2); /* Alungește reflexia când se trece cursorul peste text */
+#text:hover #text_reflectat{
+  transform-origin: top;
+  transform: rotateX(180deg) skew(-45deg) scaleY(1) translate(10px, -30px); /* Alungește reflexia */
 }
+
 
 .text-container {
   overflow: hidden; 
